@@ -1,0 +1,17 @@
+= prom-jvm-simple
+
+Spring Bootアプリケーションからメトリクスを取得・表示するためのPrometheus + Grafanaの最小セット。 +
+docker-composeを使用し、PrometheusとGrafanaを起動する。 +
+Spring BootアプリケーションではSpring Boot Actuatorの機能を使用してPrometheus向けのメトリクスエンドポイントを公開する前提。
+Prometheusではfile-sd-configsを使用し、後からアプリケーションを指定できるようにしてある。 +
+GrafanaではデータソースとしてPrometheusを設定してあり、以下のダッシュボードをロードするように設定してある。
+
+* link:https://grafana.com/grafana/dashboards/4701[JVM (Micrometer) dashboard for Grafana | Grafana Labs]
+
+== usage
+
+[source]
+----
+docker-compose up
+----
+
